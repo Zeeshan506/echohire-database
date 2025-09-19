@@ -9,10 +9,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - echohire_data:/var/lib/postgresql/data
+      - database_echohire_data:/var/lib/postgresql/data
 
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     container_name: echohire-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
@@ -23,4 +23,5 @@ services:
       - postgres
 
 volumes:
-  echohire_data:
+  database_echohire_data:
+    external: true
