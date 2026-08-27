@@ -1,0 +1,5 @@
+# Local secrets
+.env
+
+# Local PostgreSQL data backup; store outside the repository or in approved backup storage.
+echohire_backup.tgz
